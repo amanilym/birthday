@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Twins!</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Body and Animated Background */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container for sections */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Balloon animation styling */
+        .balloon {
+            font-size: 3em;
+            position: fixed;
+            bottom: -100px;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        /* Balloon colors and positions */
+        .balloon:nth-child(1) { left: 10%; color: #ff6f61; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 30%; color: #ffcc00; animation-delay: 1s; }
+        .balloon:nth-child(3) { left: 60%; color: #ff69b4; animation-delay: 2s; }
+        .balloon:nth-child(4) { left: 80%; color: #5dc1b9; animation-delay: 3s; }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-110vh); opacity: 0; }
+        }
+
+        /* Cake animation styling */
+        .cake1 {
+            font-size: 3em;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite ease-in-out;
+
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -20px); }
+        }
+
+        .cake2 {
+            font-size: 3em;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite ease-in-out;
+
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -20px); }
+        }
+
+        /* Heading and text */
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease;
+            font-family: cursive;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        p1 {
+            font-size: 2.4em;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+            color: #ff69b4;
+            font-family: cursive;
+        }
+
+        /* Twins image styling */
+        .twins-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            animation: zoomIn 2s ease;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Smooth scroll animation for sections */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .start-button {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s;
+            
+        }
+        .start-button:hover {
+            transform: scale(1.1);
+            background-color: #ff4081;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Background balloons -->
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+
+    <!-- Section 1: Birthday Greeting -->
+    <div class="section" id="section1">
+        <h1>Happy Birthday to Our Favorite Twins!</h1>
+
+        <p>Today, we celebrate not just one but <strong>two incredibly special girls</strong>! 🌟🌟</p>
+
+        <p>Wishing you both double the joy🎉🎉, double the laughter, and double the love on your special day.🎉</p>
+
+        <p>May this year bring you amazing adventures, tons of fun, and endless memories together.🎂💕💕</p>
+
+
+        <!-- Twin girls' image -->
+        <img src="twins.jpg" alt="Happy Birthday, Twins!" class="twins-image">
+
+        <p1><strong>Happy Birthday, Gauri & Pooja!</strong> 🎂💕💕</p1>
+
+        <p>Lets celebrate Together!..</p>
+
+        <!-- Start Button for Audio -->
+        <button onclick="startAudio()" class="start-button">🎶 Start Music</button>
+    </div>
+
+
+    <!-- Animated cake emoji at bottom -->
+    <div class="cake1">
+        🎂🎂
+    </div>
+    <div class="cake2">
+        🎂🎂
+    </div>
+
+
+
+   <!-- Background Music -->
+   <audio id="background-audio" src="birthdaysong.mp3" loop></audio>
+
+    <script>
+        // JavaScript to add scroll animation effect when elements are visible
+        const sections = document.querySelectorAll('.section');
+
+        function startAudio() {
+            const audio = document.getElementById('background-audio');
+            audio.play();
+        }
+
+        function animateOnScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();  // Initial call
+    </script>
+</body>
+</html>
